@@ -1,0 +1,34 @@
+\documentclass[12pt,a4paper,oneside]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel}
+
+\usepackage[a4paper,width=150mm,top=30mm,bottom=25mm,headheight=2cm]{geometry}
+\usepackage{lastpage}
+
+\usepackage{graphicx} % Import images
+
+\usepackage{listings} % Code highlight
+
+% Header style
+\usepackage{fancyhdr}
+
+\fancypagestyle{header-footer}{
+    \fancyhf{}
+    \fancyhead[LE,RO]{s175119, s175198, s160198,\\ s175108 \& s175116}
+    \fancyhead[LO,RE]{\leftmark}
+    \fancyfoot[C]{\thepage\ af \pageref{LastPage}}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    % \fancyhead[LE,RO]{s175119, s175198, s160198,\\ s175108 \& s175116}
+    % \fancyhead[LO,RE]{\leftmark}
+    \fancyfoot[C]{\thepage\ af \pageref{LastPage}}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+}
+
+\pagestyle{header-footer}
