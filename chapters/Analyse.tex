@@ -19,7 +19,42 @@ I dette kapitel vil vi gennemgå kravspecifikation til programmet, samt optegne 
 
 \section{Interessentanalyse}
 
+\begin{center}
+    \begin{tabular}{ | l | p{13cm} |}
+    \hline
+    \textbf{Interresent} & \textbf{Interesse / Mål} \\ \hline
+    Spiller/-er & Kunne styre et system der styrer et spil mellem 2 personer, hvor i der kastes med et raflebæger med to terninger i og ser resultatet med det samme. \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
+
 \section{Use cases}
+
+\begin{center}
+    \begin{tabular}{ | p{15cm} |}
+    \hline
+    \textbf{Use case:} SpilGame \\ \hline
+    \textbf{ID:} 1 \\ \hline
+    \textbf{Brief description} Spiller/-er skal kunne spil spil/Game (starte spillet) og slå med terningen     \\ \hline
+    \textbf{Primary actors:} Spiller/-er \\ \hline
+    \textbf{Secondary actors:} Ingen. \\ \hline
+    \textbf{Preconditions:} Ingen.     \\ \hline
+    \textbf{Main flow:}
+    \begin{enumerate}
+        \item \textbf{Spiller 1 indtaster navn}
+        \item \textbf{Spiller 2 indtaster navn}
+        \item \textbf{Spiller 1 indtaster roll for at slå med terningen}
+        \item \textbf{Spiller 2 indtaster roll for at slå med terningen}
+        \item \textbf{Opnås 40 point og to ens terninger slås stoppes spillet}    
+    \end{enumerate} \\ \hline
+    \textbf{Postconditions:} Ingen.\\ \hline
+    \textbf{Alternative flow:}
+    \\- Ekstra ture gives ved at slå to ens terninger
+    \\- Slås ens 1’ere bliver spillerens score nulstillet
+    \\- Spil afsluttes hvis der bliver slået to 6’ere, med den forudsætning at to 6’ere blev slået i den forrige runde  \\ \hline
+    \hline
+    \end{tabular}
+\end{center}
 
 \section{Domænemodel}
 
