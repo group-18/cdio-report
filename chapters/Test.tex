@@ -1,1 +1,30 @@
 \chapter{Test}
+
+I dette afsnit vil vi forklare om hvordan vi har lavet testet vores software.
+Vi har blandt andet gjort brug af unit tests og test cases.
+
+\section{Unit test}
+
+For at softwaren bag holder en vis kvalitet, er der udført en generel unit test på de klasserne i spillet.
+Denne unit test indebærer simple test af alle metoder i klasserne.
+Derudover er lavet to udvidede test.
+\\
+Den ene tester om terningen er fair med 60000 kast og en fejlmargen på 400 slag pr. side af terningen.
+Den anden kigger på om sandsynlighederne for de respektive summe ved to terningener er sandsynligt korrekte.
+Dette gøres også ved 60000 kast med 2 terninger for derefter at beregne sandsynligheden for den respektive sum samt det faktiske resultat.
+Nedenfor ses det udsnit af testen som ordner denne beregning.
+\\
+
+\begin{lstlisting}
+double oneRollPercent = (double) 100 / numberOfRolls;
+    
+double totalPercentage = 0;
+double failureRate = 0.75;
+for (int i = numberOfDies; i < rolls.length; i++) {
+    double percentage = (double) rolls[i] * oneRollPercent;
+    int posibilities = this.numPossibilities(numberOfDies, i);
+    double expectedPercentage = posibilities * (100.0 / 36.0);
+
+    totalPercentage += percentage;
+}
+\end{lstlisting}
