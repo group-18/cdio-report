@@ -1,18 +1,18 @@
 \chapter{Test}
 
-I dette afsnit vil vi forklare om hvordan vi har lavet testet vores software.
+I dette afsnit vil vi forklare, hvordan vi har lavet test af vores software.
 Vi har blandt andet gjort brug af unit tests og test cases.
 
 \section{Unit test}
 
-For at softwaren bag holder en vis kvalitet, er der udført en generel unit test på de klasserne i spillet.
+For at softwaren bag holder en vis kvalitet, er der udført en generel unit test på klasserne i spillet.
 Denne unit test indebærer simple test af alle metoder i klasserne.
 Derudover er lavet to udvidede test.
 \\
-Den ene tester om terningen er fair med 60000 kast og en fejlmargen på 400 slag pr. side af terningen.
-Den anden kigger på om sandsynlighederne for de respektive summe ved to terningener er sandsynligt korrekte.
-Dette gøres også ved 60000 kast med 2 terninger for derefter at beregne sandsynligheden for den respektive sum samt det faktiske resultat.
-Nedenfor ses det udsnit af testen som ordner denne beregning.
+Den ene, tester om terningen er fair, med 60000 kast og en fejlmargen på 400 slag pr. side af terningen.
+Den anden, kigger på, om sandsynlighederne for de respektive summe, ved to terninger er sandsynligt korrekte.
+Dette gøres også ved 60000 kast, med 2 terninger, for derefter at beregne sandsynligheden, for den respektive sum, samt det faktiske resultat.
+Nedenfor ses det udsnit af testen, som ordner denne beregning.
 \\
 
 \begin{lstlisting}
@@ -31,7 +31,7 @@ for (int i = numberOfDies; i < rolls.length; i++) {
 \newpage
 \section{Testcases}
 Herunder er en række testcases, som er blevet udarbejdet ud fra vores krav og mål.
-Testene er blevet testet i IntelliJ.
+Alle test er blevet testet i IntelliJ.
 \\\\Testcase 1 handler om, hvorvidt programmet tager korrekt imod Strings, når den beder om navne, og hvorvidt det bliver gemt.
 Det ville blive kaotisk, hvis der var blevet sat et navn til f.eks. Player1, og programmet så senere omtaler Player1 som Player1 og ikke det pågældende navn.
 
@@ -42,7 +42,6 @@ Det ville blive kaotisk, hvis der var blevet sat et navn til f.eks. Player1, og 
 \end{figure}
 
 Testcase 2 handler om, hvorvidt programmet kan tage imod to ens terninger og Testcase 2 handler om, hvorvidt programmet kan tage imod to ens terninger og ikke give turen videre.
-
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=10cm]{graphics/TC02}
