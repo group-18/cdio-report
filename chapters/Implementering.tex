@@ -1,1 +1,37 @@
 \chapter{Implementering}
+\begin{Implementering}
+    I vores arbejde med at kode dette program, har vi startet ud med at 
+    se bort fra de ekstra krav der er, og blot fået implementeret core programmet,
+    altså et program der opretter to spillere, og to terninger, og den spiller der
+    først når 40 point vinder. Dette gjorde vi ved brug af den viden vi har
+    fra programmering. Vi besluttede os for at lave et while loop således at
+    programmet fortsætter med at køre indtil vi har opnået en hvis score,
+    dermed er core delen af programmet blevet lavet.
+    Herefter begyndte vi på at arbejde med at implementere de ekstra krav der
+    er stillet. Dette gjorde vi ved grundigt at overveje hvilken form for kode
+    der skulle bruges. Vi fandt ud af at alle ekstra kravene ville kunne blive
+    løst ved at benytte if-else sætninger, hvor i krav kriterierne indgår.
+    De første 3 krav var relativt nemme at opnå da disse bare bestod af simple
+    if-else sætninger, men det 4 krav, det krav der lyder på at man kun kan vinde
+    på par, var sværere at få implementeret. Vi har valgt at kode programmet
+    så hvis man får over 40 point, men ikke slår en double, vil programmet
+    sætte din score til 40. Dette har vi gjort da det er ligegyldigt om man har
+    40 eller 100 point, ligeså snart man har 40 point skal man bruge et par for at vinde.
+    Ved at stille det op på denne måde, sørger vi for at while loopet fortsætter
+    til at der er en spiller der både har en score>=40, og at han har slået et par
+    i denne runde.
+    Brugervejledning for programmet:
+    Programmet er meget simpelt sat op, og har en masse System.out.println
+    der fortæller brugeren præcis hvad der foregår, og hvad han skal gøre for
+    at programmet fortsætter. Det starter ud med at printe alle spillets regler,
+    således at brugeren kan se reglerne. Derefter beder programmet brugeren om at
+    indtaste navn på spiller 1, og navn på spiller 2. Herefter vil programmet
+    blive ved med at spørge brugeren om at skrive "roll", indtil brugeren taster
+    "roll". Programmet vil herefter printe terningeslaget, summen af slaget,
+    og stillingen mellem de to spillere, i tilfælde af at der er slået et par,
+    vil programmet skrive at det er den samme spillers tur.
+    Programmet bliver ved med dette indtil en spiller opnår over 40 point,
+    efter dette vil programmet skrive, at man skal slå et par for at vinde.
+    Dette bliver den ved med indtil at en af spillerne slår et par, der ikke
+    er par 1, da par 1 selvfølgelig nulstiller spillerens score.
+
