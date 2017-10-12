@@ -33,7 +33,7 @@ Diagrammet viser den planlagte tid for projektet.
         title label node/.append style={below=.3pt},
         include title in canvas=false,
         bar label font=\mdseries\small\color{black!70},
-        bar label node/.append style={left=2cm},
+        bar label node/.append style={left=2pt},
         bar/.append style={draw=none, fill=black!50},
         bar incomplete/.append style={fill=barblue},
         bar progress label font=\mdseries\footnotesize\color{black!70},
@@ -77,7 +77,7 @@ Diagrammet viser den planlagte tid for projektet.
 \pagebreak
 
 \noindent
-Diagrammet herunder er inddelt i dage indtil aflevering (10 dage). \\ Diagrammet viser den reelle tid der er brugt ved projektet.
+Diagrammet herunder er inddelt i dage indtil aflevering (10 dage).  \\ Diagrammet viser den reelle tid der er brugt ved projektet.
     
 %
 %   GANTT DIAGRAM 2
@@ -92,7 +92,7 @@ Diagrammet herunder er inddelt i dage indtil aflevering (10 dage). \\ Diagrammet
         title label node/.append style={below=.3pt},
         include title in canvas=false,
         bar label font=\mdseries\small\color{black!70},
-        bar label node/.append style={left=2cm},
+        bar label node/.append style={left=2pt},
         bar/.append style={draw=none, fill=black!50},
         bar incomplete/.append style={fill=barblue},
         bar progress label font=\mdseries\footnotesize\color{black!70},
@@ -105,24 +105,30 @@ Diagrammet herunder er inddelt i dage indtil aflevering (10 dage). \\ Diagrammet
         group progress label font=\bfseries\small,
         link/.style={-latex, line width=1.5pt, linkred},
         link label font=\scriptsize\bfseries,
-        ]{1}{20}
+      ]{1}{20}
+
+        %
+        % Ganttgroup laver den store fyldige overgruppe
+        % Ganttbar laver de små linjer
+        % De tal der er ude i siden skriver man fra og til i.
+        %
 
     \gantttitlelist{1,...,10}{2}                                    \\
 
-        \ganttgroup {\underline{Analyse/planlægning -}} {1}{6}      \\
-        \ganttbar   {Krav/opgaveanalyse}                {1}{4}      \\
-        \ganttbar   {Projektopsætning/plan}             {1}{1}      \\
-        \ganttbar   {Tildeling af opgaver}              {2}{2}      \\
+        \ganttgroup {\underline{Analyse/planlægning -}} {11}{16}      \\
+        \ganttbar   {Krav/opgaveanalyse}                {11}{14}      \\
+        \ganttbar   {Projektopsætning/plan}             {15}{16}      \\
+        \ganttbar   {Tildeling af opgaver}              {14}{14}      \\
 
-        \ganttgroup {\underline{Rapport -}}             {3}{20}     \\
-        \ganttbar   {Analyse}                           {3}{7}      \\
-        \ganttbar   {Design}                            {8}{10}     \\
-        \ganttbar   {Test og implementering}            {6}{11}     \\
-        \ganttbar   {Projektplanlægning}                {16}{18}    \\
-        \ganttbar   {Konklusion}                        {18}{19}    \\
+        \ganttgroup {\underline{Rapport -}}             {12}{20}      \\
+        \ganttbar   {Analyse}                           {13}{13}      \\
+        \ganttbar   {Design}                            {14}{14}     \\
+        \ganttbar   {Test og implementering}            {15}{15}     \\
+        \ganttbar   {Projektplanlægning}                {16}{16}    \\
+        \ganttbar   {Konklusion}                        {17}{17}    \\
 
-        \ganttgroup {\underline{Programmering -}}       {4}{13}     \\
-        \ganttbar   {Test og forbedring 1}              {4}{8}      \\
-        \ganttbar   {Test og forbedring 2}              {9}{13}     \\
+        \ganttgroup {\underline{Programmering -}}       {12}{20}     \\
+        \ganttbar   {Test og forbedring 1}              {13}{16}      \\
+        \ganttbar   {Test og forbedring 2}              {17}{20}     \\
     \end{ganttchart}
 \end{center}
