@@ -1,6 +1,7 @@
 \documentclass[12pt,a4paper,oneside]{report}
 
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[danish]{babel}
 
 \usepackage[a4paper,width=150mm,top=30mm,bottom=25mm,headheight=2cm]{geometry}
@@ -56,3 +57,24 @@
 }
 
 \pagestyle{header-footer}
+
+\makeatletter
+\renewcommand\chapter{
+    \if @openright
+        \cleardoublepage
+    \else
+        \clearpage
+    \fi
+
+    \thispagestyle{header-footer}
+
+    \global\@topnum\z@
+    \@afterindentfalse
+    \secdef\@chapter\@schapter
+}
+\makeatother
+
+\usepackage{titlesec}
+\definecolor{dtured}{cmyk}{0,.91,.72,.23}
+\newcommand{\hsp}{\hspace{10pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{dtured}{|}\hsp}{0pt}{\Huge\bfseries}
