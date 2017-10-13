@@ -45,20 +45,14 @@
 
 \fancypagestyle{header-footer}{
     \fancyhf{}
-    \fancyhead[LE,RO]{s175119, s175198, s160198,\\ s175108 \& s175116}
-    \fancyhead[LO,RE]{\leftmark}
-    \fancyfoot[C]{\thepage\ af \pageref{LastPage}}
-    \renewcommand{\headrulewidth}{0.4pt}
-    \renewcommand{\footrulewidth}{0.4pt}
-}
+    \lhead{CDIO 1}
+    \rhead{\nouppercase{\leftmark}}
 
-\fancypagestyle{plain}{
-    \fancyhf{}
-    % \fancyhead[LE,RO]{s175119, s175198, s160198,\\ s175108 \& s175116}
-    % \fancyhead[LO,RE]{\leftmark}
-    \fancyfoot[C]{\thepage\ af \pageref{LastPage}}
-    \renewcommand{\headrulewidth}{0pt}
-    \renewcommand{\footrulewidth}{0.4pt}
+    \lfoot{\includegraphics[scale=0.5]{graphics/DTU-Compute-B-UK}}
+    \rfoot{\thepage\ af \pageref{LastPage}}
+    
+    \renewcommand{\headrulewidth}{0.0pt}
+    \renewcommand{\footrulewidth}{0.0pt}
 }
 
 \pagestyle{header-footer}
