@@ -4,32 +4,41 @@
 \usepackage[danish]{babel}
 
 \usepackage[a4paper,width=150mm,top=30mm,bottom=25mm,headheight=2cm]{geometry}
+
 \usepackage{lastpage}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
 
 \usepackage{graphicx} % Import images
+\usepackage{wallpaper}
 \usepackage{pgfgantt} % Gantt Charts
-\usepackage{color}
 \usepackage{float}
 
+\usepackage[justification=centering]{caption}
+\usepackage{subcaption}
+
+\usepackage{color}
+
 \usepackage{listings} % Code highlight
-\definecolor{javared}{rgb}{0.6,0,0} % for strings
-\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
-\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
-\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+\definecolor{javared}{rgb}{0.6,0,0}
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35}
+\definecolor{javapurple}{rgb}{0.5,0,0.35}
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75}
  
 \lstset{language=Java,
-basicstyle=\ttfamily\small,
-keywordstyle=\color{javapurple}\bfseries,
-stringstyle=\color{javared},
-commentstyle=\color{javagreen},
-morecomment=[s][\color{javadocblue}]{/**}{*/},
-numbers=left,
-numberstyle=\tiny\color{black},
-stepnumber=1,
-numbersep=10pt,
-tabsize=4,
-showspaces=false,
-showstringspaces=false}
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{javapurple}\bfseries,
+    stringstyle=\color{javared},
+    commentstyle=\color{javagreen},
+    morecomment=[s][\color{javadocblue}]{/**}{*/},
+    numbers=left,
+    numberstyle=\tiny\color{black},
+    stepnumber=1,
+    numbersep=10pt,
+    tabsize=4,
+    showspaces=false,
+    showstringspaces=false
+}
 
 % Header style
 \usepackage{fancyhdr}
